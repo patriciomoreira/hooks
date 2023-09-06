@@ -28,15 +28,12 @@ const UseEffect = (props) => {
 
 	useEffect(() => {
 		setFatorial(calcFatorial(number));
+		setStatusNum(isPar(number));
 	}, [number]);
 
 	useEffect(() => {
 		if (fatorial > 1000000) document.title = "Eita";
 	}, [fatorial]);
-
-	useEffect(() => {
-		setStatusNum(isPar(number));
-	}, [number]);
 
 	return (
 		<div className="UseEffect">
